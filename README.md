@@ -47,37 +47,12 @@ If you use this repository in academic work, please cite:
 **IEEE Format**
 > H. A. Al-Ghuraybi, *"AMCB: Authenticated Medical Cyber-Physical Blockchain Model,"* Multimedia Tools and Applications, vol. 83, pp. 89079–89109, 2024. DOI: 10.1007/s11042-024-18950-1.
 
-**BibTeX**
-```bibtex
-@article{alghuraybi2024amcb,
-  title     = {AMCB: Authenticated Medical Cyber-Physical Blockchain Model},
-  author    = {Al-Ghuraybi, Hind A.},
-  journal   = {Multimedia Tools and Applications},
-  volume    = {83},
-  pages     = {89079--89109},
-  year      = {2024},
-  publisher = {Springer},
-  doi       = {10.1007/s11042-024-18950-1}
-}
-```
-
----
-
-## ⚖ License
-
-This repository is released under the **MIT License**.
-
-- Original work © 2022 Lim Jason — *Blockchain Medical Records System*  
-- Extended implementation © 2025 Hind Al-Ghuraybi — *AMCB Framework Adaptation*
-
 ---
 
 ### 🔎 Notes
 
 - This repository represents a **research-grade, reproducible implementation** of the AMCB architecture.  
 - Each sub-module (layer) includes its own execution guide, dataset references, and validation results as documented in the published paper.  
-- For architectural diagrams and validation results, see the `/docs/` folder.
 
 ---
 
-> © 2025 AMCB Research Implementation – “Turning Cyber-Physical Security Theory into Executable Trust Layers.”

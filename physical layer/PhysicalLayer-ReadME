@@ -1,0 +1,36 @@
+# 🔐 Physical Layer — PUF-Based Device Identity (Root of Trust in AMCB)
+
+### 🎓 Role in AMCB Architecture
+This layer represents the **Root of Trust (Physical Authentication Stage)** described in the AMCB model.  
+Instead of assuming abstract device identity, **a real PUF logic circuit was designed to generate 5 unique hardware response keys**.
+
+### 🧩 Stage 1 — PUF Circuit Identity Generation
+- A **hardware-inspired logic circuit (PUF)** was manually constructed.
+- **5 device-specific PUF responses** were extracted from it.
+- These represent **real CPS fingerprint identities**, not randomly generated keys.
+
+📁 Circuit Reference Image (Included in this folder as `PUF_Diagram.png`):
+
+```
+![PUF Diagram](physical layer/circuit-20230127-0425.png)
+```
+
+### 🧪 Stage 2 — MAC + PUF Verification Script (Pre-Blockchain Access Gate)
+Before allowing devices to be written into the blockchain, **a verification script was executed** to ensure **only trusted CPS hardware identities are registered**.
+
+👉 Script used: (physical layer/MAC Adresse And PUF Verification.js)
+
+```
+
+> ✅ **Only devices that passed this physical verification were allowed to register into the Blockchain Layer**, matching the **AMCB pre-authentication rule**.
+
+---
+
+### 📌 Output of This Layer
+| Device | MAC Address | PUF Response (Extracted Key) | Status |
+|--------|------------|-----------------------------|--------|
+| Device 1 | ... | ... | ✅ Accepted |
+| Device 2 | ... | ... | ✅ Accepted |
+| ... | ... | ... | ✅ Accepted |
+
+> 🎯 **This completes Layer 1 (Physical Trust Initialization).** Output keys from this layer are forwarded next to the Blockchain Layer for ledger registration.

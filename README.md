@@ -1,93 +1,83 @@
+> 🎓 Academic Research Implementation • DOI Verified • AMCB Model (Published 2024 — Code Extended 2025)
+
 # AMCB – Authenticated Medical Cyber-Physical Blockchain Model
 
-🔬 This repository contains the **extended implementation** developed as part of my **MSc Research Project (2025)** titled:
+This repository hosts the **official research-aligned codebase** for the **AMCB framework**, developed as part of an MSc thesis project and later **published in 2024**.  
+The implementation was further extended in **2025** to map the research architecture directly to an executable multi-layer system.
 
-> **"AMCB: Authenticated Medical Cyber-Physical Blockchain Model"**
-
-This work builds upon the original blockchain medical record system and enhances it by integrating **Firebase-based secure cloud storage**, **authenticated cyber-physical validation**, and an **intelligent trust layer** inspired by CPS security architectures.
-
-📌 *Original implementation reference:* `JasonnLim/Blockchain-MedicalRecords`  
-📌 *This AMCB-enhanced version introduces secure Firebase synchronization and a validated access workflow.*
-
----
-
-## ✅ Enhancements Introduced in the AMCB Version
-
-The AMCB release extends the original project with the following capabilities:
-
-- 🔐 **Cloud-based persistent storage using Firebase** to securely store validated medical records beyond on-chain logs.
-- 🧠 **Cyber-Physical trust layer** aligned with real-world CPS security requirements.
-- 🌐 **Secure synchronization logic** between blockchain events and cloud storage.
-- 📡 **Improved modular structure**, preparing the system for integration with IoT / CPS edge devices.
+> **Research Paper:**  
+> *"AMCB: Authenticated Medical Cyber-Physical Blockchain Model"*  
+> **Journal:** Multimedia Tools and Applications (Springer), Volume 83, pp. 89079–89109 (2024)  
+> **DOI:** [10.1007/s11042-024-18950-1](https://doi.org/10.1007/s11042-024-18950-1)
 
 ---
 
-## 🛠 Technology Stack
+## 🧠 Project Overview
 
-| Layer                        | Tools / Technologies Used |
-|----------------------------|---------------------------|
-| Blockchain Layer           | Solidity, Web3.js, Ethereum (Rinkeby / Goerli Testnet) |
-| DApp Frontend             | React.js, JavaScript, Metamask |
-| Cloud Storage Layer      | **Firebase Cloud Storage (AMCB Extension)** |
-| Smart Contract Deployment | Node.js Scripts (`compile.js` & `deploy.js`) |
-| Testing Environment        | Mocha / Chai (via `npm run test`) |
+AMCB proposes a **multi-layered security model** for authenticated medical cyber-physical systems (MCPS).  
+The framework integrates **PUF-based physical authentication**, **blockchain-anchored identity**, **cloud storage resilience**, and **AI-driven inspection** to form an end-to-end trust chain between medical devices, users, and cloud infrastructure.
+
+This repository provides the **practical mapping** of that model into modular components, each implemented as a standalone layer.
 
 ---
 
-## ▶️ Running the AMCB System
+## 🧭 AMCB Layer Architecture (Research → Implementation)
 
-### ✅ Prerequisites
-Make sure you have the following installed and configured:
-
-- ✅ **Node.js**
-- ✅ **Metamask** browser extension
-- ✅ Set Metamask to **Rinkeby or Goerli Test Network**
-- ✅ Get test ETH from a **Faucet**
-- ✅ Firebase project configured (Firestore / Cloud Storage enabled)
+| **Layer** | **Repository Folder** | **Conceptual Function** | **Implementation Description** |
+|------------|----------------------|--------------------------|--------------------------------|
+| 🧩 **Physical Layer** | `/physical-layer/` | Establishes hardware-rooted trust using PUFs | Implements a real logic-based PUF circuit producing 5 hardware keys verified via MAC + PUF pairing before blockchain registration |
+| ⛓ **Blockchain Layer** | `/blockchain-layer/ethereum/` | Provides decentralized identity ledger | Solidity smart contract for secure on-chain registration of verified entities |
+| ☁ **Storage Layer** | `/storage-layer/firebase/` | Ensures redundant data persistence | Firebase integration for off-chain encrypted record storage and synchronization |
+| 🔍 **Inspection Layer** | `/inspection-layer/` | Performs AI/ML-based integrity validation | Includes five datasets and ML models evaluated to reproduce the paper’s experimental results |
+| 💻 **Application Layer** | `/application-layer/` | User & access-control interface | DApp built with React / Next.js connecting blockchain events to Firebase storage |
+| 🧪 **Deployment & Testing** | `/tests/` | Verifies functional integrity | Mocha / Chai scripts for smart-contract unit testing |
 
 ---
 
-### 📦 Install Dependencies
-```bash
-npm install
+## 🧭 AMCB Architecture Diagram
+
+![AMCB Architecture](docs/AMCB_Architecture.png)
+
+---
+
+## 📚 Citation
+
+If you use this repository in academic work, please cite:
+
+**IEEE Format**
+> H. A. Al-Ghuraybi, *"AMCB: Authenticated Medical Cyber-Physical Blockchain Model,"* Multimedia Tools and Applications, vol. 83, pp. 89079–89109, 2024. DOI: 10.1007/s11042-024-18950-1.
+
+**BibTeX**
+```bibtex
+@article{alghuraybi2024amcb,
+  title     = {AMCB: Authenticated Medical Cyber-Physical Blockchain Model},
+  author    = {Al-Ghuraybi, Hind A.},
+  journal   = {Multimedia Tools and Applications},
+  volume    = {83},
+  pages     = {89079--89109},
+  year      = {2024},
+  publisher = {Springer},
+  doi       = {10.1007/s11042-024-18950-1}
+}
 ```
 
 ---
 
-### 🚀 Start the AMCB DApp
-```bash
-npm run start
-```
+## ⚖ License
+
+This repository is released under the **MIT License**.
+
+- Original work © 2022 Lim Jason — *Blockchain Medical Records System*  
+- Extended implementation © 2025 Hind Al-Ghuraybi — *AMCB Framework Adaptation*
 
 ---
 
-### 🧪 Run Smart Contract Tests
-```bash
-npm run test
-```
+### 🔎 Notes
+
+- This repository represents a **research-grade, reproducible implementation** of the AMCB architecture.  
+- Each sub-module (layer) includes its own execution guide, dataset references, and validation results as documented in the published paper.  
+- For architectural diagrams and validation results, see the `/docs/` folder.
 
 ---
 
-### 🔁 Recompile & Deploy Smart Contracts (after editing Solidity code)
-```bash
-cd ethereum
-node compile.js
-node deploy.js
-```
-
----
-
-## 🎦 Demo Video (Original Base System)
-To understand the base architecture before AMCB enhancements, you can refer to the original demo:
-https://www.youtube.com/watch?v=JIswvyxmw3k&t=0s
-
----
-
-## 📚 Academic Reference
-This codebase is part of the following academic research work:
-
-> **Al-Ghuraybi, H. A. (2025). AMCB: Authenticated Medical Cyber-Physical Blockchain Model. MSc Research Project.**
-
-📌 *If you reference this implementation in academic work, please cite accordingly.*
-
----
+> © 2025 AMCB Research Implementation – “Turning Cyber-Physical Security Theory into Executable Trust Layers.”

@@ -36,7 +36,7 @@ This repository provides the **practical mapping** of that model into modular co
 
 ## 🧭 AMCB Architecture Diagram
 
-![AMCB Architecture](docs/AMCB_Architecture.png)
+![AMCB Architecture](AMCB_Architecture.png)
 
 ---
 

@@ -13,10 +13,6 @@ This layer adopts a **"trust-but-verify"** security paradigm—designed to reduc
 3. **Cross-Validation** – The decision is compared between:
    - A **Baseline Model** (static, verified model used as reference)
    - An **Adaptive Model** (dynamically updated through continuous learning)
-4. **Decision Logic:**
-   - ✅ **Match Confirmed** → Forward to Blockchain Layer or Active Response Layer.
-   - 🔁 **Retraining Required** → Send back to the continuous training pipeline.
-   - 🚨 **Alert & Block** → Flag as a security incident and quarantine for forensic review.
 
 ---
 
@@ -43,19 +39,16 @@ The orchestration logic ensures **modular plug-and-play integration** for future
 
 ---
 
-## 🧠 AI Validation & Drift Monitoring
-- Every scenario generates a **Confidence Vector**, comparing the classification confidence between the **Baseline Model** and the **Adaptive Model**.
-- If the deviation exceeds a defined **Drift Threshold**, the event is tagged as **Drift Suspicion** and queued for retraining.
-- This process turns the Inspection Layer into an **Adaptive Forensic Consistency Engine**, enforcing long-term model stability in live CPS environments.
+## 📎 Source & Attribution Notice (Kaggle Dataset Integration)
 
----
+Some of the validation pipelines and baseline benchmarks integrated within this layer were partially built or inspired using **public Kaggle datasets**, which were **refactored, restructured, and modularized** to align with the architecture of the Inspection Layer.
 
-## 📎 Source & Attribution Notice
-Some verification modules within this layer incorporate **open-source code fragments from Kaggle projects**, which were carefully **refactored, modularized, and integrated** into the unified Inspection Layer architecture.
-
-- ✅ All reused components are strictly employed for **research and benchmarking purposes**.
-- ✅ Attribution and original logic references are retained in code comments.
-- ✅ A dedicated `attribution.md` file documents original Kaggle sources to ensure reproducibility and academic transparency.
+| Kaggle Dataset / Project | Applied Scenario | Purpose in Pipeline |
+|------------------------|-----------------|--------------------|
+| **N-BaIoT Dataset to Detect IoT Botnet Attacks** | Scenario 1 – IoT Intrusion Detection | Model benchmarking for IoT botnet and abnormal traffic detection. |
+| **IoT Malware Detection and Classification** | Scenario 1 & Scenario 4 | Cross-domain malware behavior analysis between IoT and Android devices. |
+| **Network Traffic Android Malware** | Scenario 4 – Android Malware Detection | Opcode and permission-based classification for Android threats. |
+| **pe_header_data – Malware Detection Using ML (PE Files)** | Scenario 3 – PE Header Malware Detection | Lightweight PE metadata-based malware scanning for rapid pre-filtering. |
 
 ---
 

@@ -12,15 +12,15 @@ Instead of assuming abstract device identity, **a real PUF logic circuit was des
 📁 Circuit Reference Image (Included in this folder as `PUF_Diagram.png`):
 
 ```
-![PUF Diagram](physical layer/circuit-20230127-0425.png)
+![PUF Diagram](physical layer/circuit-20230127-0425.png))
 ```
 
 ### 🧪 Stage 2 — MAC + PUF Verification Script (Pre-Blockchain Access Gate)
 Before allowing devices to be written into the blockchain, **a verification script was executed** to ensure **only trusted CPS hardware identities are registered**.
 
-👉 Script used: (physical layer/MAC Adresse And PUF Verification.js)
+👉 Script used in physical layer/MAC Adresse And PUF Verification.js
 
-```
+
 
 > ✅ **Only devices that passed this physical verification were allowed to register into the Blockchain Layer**, matching the **AMCB pre-authentication rule**.
 
@@ -34,3 +34,4 @@ Before allowing devices to be written into the blockchain, **a verification scri
 | ... | ... | ... | ✅ Accepted |
 
 > 🎯 **This completes Layer 1 (Physical Trust Initialization).** Output keys from this layer are forwarded next to the Blockchain Layer for ledger registration.
+

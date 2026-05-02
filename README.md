@@ -2,7 +2,6 @@
 
 # AMCB – Authenticated Medical Cyber-Physical Blockchain Model
 
-[![DOI](https://zenodo.org)](https://doi.org)
 This repository hosts the **official research-aligned codebase** for the **AMCB framework**, developed as part of an MSc thesis project and later **published in 2024**.  
 The implementation was further extended in **2025** to map the research architecture directly to an executable multi-layer system.
 
@@ -10,7 +9,7 @@ The implementation was further extended in **2025** to map the research architec
 > *"AMCB: Authenticated Medical Cyber-Physical Blockchain Model"*  
 > **Journal:** Multimedia Tools and Applications (Springer), Volume 83, pp. 89079–89109 (2024)  
 > **DOI:** [10.1007/s11042-024-18950-1](https://doi.org/10.1007/s11042-024-18950-1)
-
+>**DOI of Code:**[![DOI](https://zenodo.org)](https://doi.org/10.5281/zenodo.19990115)
 ---
 
 ## 🧠 Project Overview
